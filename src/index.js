@@ -25,11 +25,25 @@ document.getElementById("app").innerHTML = `
 // console.log(message);
 
 //関数の呼び出しと計算の実行
-function sayHello() {
-  return "こんにちは！";
+// function sayHello() {
+//   return "こんにちは！";
+// }
+
+// const month = 1;
+// const message = `皆さん${sayHello()}。今日から${month * 3}月です。`;
+
+// console.log(message);
+
+//従来の関数(使用例１)
+
+function func1(value) {
+  return value;
 }
+console.log(func1("func1です。"));
 
-const month = 1;
-const message = `皆さん${sayHello()}。今日から${month * 3}月です。`;
-
-console.log(message);
+//従来の関数(使用例2)
+//宣言した関数を変数に格納してから使用する。
+const func2 = function (value) {
+  return value;
+};
+console.log(func2("func2です。"));
