@@ -101,20 +101,48 @@ document.getElementById("app").innerHTML = `
 // console.log(message);
 
 //抽出したプロパティに別名をつける
+// const myProfile = {
+//   name: "田中",
+//   age: 24
+// };
+
+// const { name: newName, age: newAge } = myProfile;
+// const message = `私の名前は、${newName}です。年齢は${newAge}歳です。`;
+
+// console.log(message);
+
+// //配列の分割代入
+// //順番の入れ替えはできない。。。
+// const NorioProfile = ["のりお", 27];
+// const [myname, myage] = NorioProfile;
+
+// const mymessgae = `私の名前は、${NorioProfile[0]}です。年齢は${NorioProfile[1]}歳です。`;
+// console.log(mymessgae);
+
+//メッセージを出力する関数
+const sayHello = (name) => console.log(`こんにちは！ ${name}さん`);
+sayHello("田中");
+
+//デフォルト値の設定
+const sayGoodbye = (name = "ゲスト") =>
+  console.log(`こんにちは！${name}さん！`);
+sayGoodbye();
+sayGoodbye("佐藤");
+
+//存在しないプロパティの出力
 const myProfile = {
-  name: "田中",
-  age: 24
+  age: 27
 };
+const { name } = myProfile;
 
-const { name: newName, age: newAge } = myProfile;
-const message = `私の名前は、${newName}です。年齢は${newAge}歳です。`;
-
+const message = `私の名前は、${name}です。${myProfile.age}歳です。`;
 console.log(message);
 
-//配列の分割代入
-//順番の入れ替えはできない。。。
-const NorioProfile = ["のりお", 27];
-const [myname, myage] = NorioProfile;
+//分割代入時にデフォルト値の設定
+const goodbyeMessage = {
+  goodbyeAge: 29
+};
+const { goodbyeName = "高橋" } = goodbyeMessage;
 
-const mymessgae = `私の名前は、${NorioProfile[0]}です。年齢は${NorioProfile[1]}歳です。`;
-console.log(mymessgae);
+const mess = `さようなら！${goodbyeName}さん！`;
+console.log(mess);
