@@ -56,26 +56,57 @@ document.getElementById("app").innerHTML = `
 
 //アロー関数の省略記法
 //引数が１つなので、かっこを省略
-const func4 = (value) => {
-  return value;
+// const func4 = (value) => {
+//   return value;
+// };
+// console.log(func4("あああ"));
+
+// //引数が２つ以上の時は、かっこで囲む
+// const func5 = (value1, value2) => {
+//   return value1 + value2;
+// };
+// console.log(func5(1, 2));
+
+// //returnの省略
+// //処理が単一行で返すので、{}を省略
+// const func6 = (num1, num2) => num1 + num2;
+// console.log(func6(10, 20));
+
+// //返却値が複数の時
+// //()を用いて１行としてまとめる
+// const func7 = (val1, val2) => ({
+//   name: val1,
+//   age: val2
+// });
+// console.log(func7("田中", 24));
+
+//分割代入
+//分割代入を使用しない文字列の出力
+// const myProfile = {
+//   name: "田中",
+//   age: 24
+// };
+// const message = `私の名前は、${myProfile.name}です。年齢は${myProfile.age}です。`;
+// console.log(message);
+
+//分割代入を使用した文字列の出力
+//一部のみ取り出したり、順番が入れ替わっても表示可能らしい。。。
+// const myProfile = {
+//   name: "田中",
+//   age: 24
+// };
+// const { name, age } = myProfile;
+// const message = `私の名前は、${name}です。年齢は${age}です。`;
+
+// console.log(message);
+
+//抽出したプロパティに別名をつける
+const myProfile = {
+  name: "田中",
+  age: 24
 };
-console.log(func4("あああ"));
 
-//引数が２つ以上の時は、かっこで囲む
-const func5 = (value1, value2) => {
-  return value1 + value2;
-};
-console.log(func5(1, 2));
+const { name: newName, age: newAge } = myProfile;
+const message = `私の名前は、${newName}です。年齢は${newAge}歳です。`;
 
-//returnの省略
-//処理が単一行で返すので、{}を省略
-const func6 = (num1, num2) => num1 + num2;
-console.log(func6(10, 20));
-
-//返却値が複数の時
-//()を用いて１行としてまとめる
-const func7 = (val1, val2) => ({
-  name: val1,
-  age: val2
-});
-console.log(func7("田中", 24));
+console.log(message);
