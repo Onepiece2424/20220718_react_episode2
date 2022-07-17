@@ -49,7 +49,33 @@ document.getElementById("app").innerHTML = `
 // console.log(func2("func2です。"));
 
 //アロー関数
-const func3 = (value) => {
+// const func3 = (value) => {
+//   return value;
+// };
+// console.log(func3("func3です。"));
+
+//アロー関数の省略記法
+//引数が１つなので、かっこを省略
+const func4 = (value) => {
   return value;
 };
-console.log(func3("func3です。"));
+console.log(func4("あああ"));
+
+//引数が２つ以上の時は、かっこで囲む
+const func5 = (value1, value2) => {
+  return value1 + value2;
+};
+console.log(func5(1, 2));
+
+//returnの省略
+//処理が単一行で返すので、{}を省略
+const func6 = (num1, num2) => num1 + num2;
+console.log(func6(10, 20));
+
+//返却値が複数の時
+//()を用いて１行としてまとめる
+const func7 = (val1, val2) => ({
+  name: val1,
+  age: val2
+});
+console.log(func7("田中", 24));
