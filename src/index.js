@@ -36,14 +36,20 @@ document.getElementById("app").innerHTML = `
 
 //従来の関数(使用例１)
 
-function func1(value) {
-  return value;
-}
-console.log(func1("func1です。"));
+// function func1(value) {
+//   return value;
+// }
+// console.log(func1("func1です。"));
 
-//従来の関数(使用例2)
-//宣言した関数を変数に格納してから使用する。
-const func2 = function (value) {
+// //従来の関数(使用例2)
+// //宣言した関数を変数に格納してから使用する。
+// const func2 = function (value) {
+//   return value;
+// };
+// console.log(func2("func2です。"));
+
+//アロー関数
+const func3 = (value) => {
   return value;
 };
-console.log(func2("func2です。"));
+console.log(func3("func3です。"));
