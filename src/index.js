@@ -19,7 +19,17 @@ document.getElementById("app").innerHTML = `
 // console.log(message);
 
 //テンプレート文字列の応用
-const name = "田中";
-const age = 24;
-const message = `私の名前は、${name}です。年齢は${age}です。`;
+// const name = "田中";
+// const age = 24;
+// const message = `私の名前は、${name}です。年齢は${age}です。`;
+// console.log(message);
+
+//関数の呼び出しと計算の実行
+function sayHello() {
+  return "こんにちは！";
+}
+
+const month = 1;
+const message = `皆さん${sayHello()}。今日から${month * 3}月です。`;
+
 console.log(message);
