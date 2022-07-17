@@ -110,3 +110,11 @@ const { name: newName, age: newAge } = myProfile;
 const message = `私の名前は、${newName}です。年齢は${newAge}歳です。`;
 
 console.log(message);
+
+//配列の分割代入
+//順番の入れ替えはできない。。。
+const NorioProfile = ["のりお", 27];
+const [myname, myage] = NorioProfile;
+
+const mymessgae = `私の名前は、${NorioProfile[0]}です。年齢は${NorioProfile[1]}歳です。`;
+console.log(mymessgae);
