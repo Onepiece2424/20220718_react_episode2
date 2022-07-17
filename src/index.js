@@ -120,29 +120,48 @@ document.getElementById("app").innerHTML = `
 // console.log(mymessgae);
 
 //メッセージを出力する関数
-const sayHello = (name) => console.log(`こんにちは！ ${name}さん`);
-sayHello("田中");
+// const sayHello = (name) => console.log(`こんにちは！ ${name}さん`);
+// sayHello("田中");
 
-//デフォルト値の設定
-const sayGoodbye = (name = "ゲスト") =>
-  console.log(`こんにちは！${name}さん！`);
-sayGoodbye();
-sayGoodbye("佐藤");
+// //デフォルト値の設定
+// const sayGoodbye = (name = "ゲスト") =>
+//   console.log(`こんにちは！${name}さん！`);
+// sayGoodbye();
+// sayGoodbye("佐藤");
 
-//存在しないプロパティの出力
-const myProfile = {
-  age: 27
-};
-const { name } = myProfile;
+// //存在しないプロパティの出力
+// const myProfile = {
+//   age: 27
+// };
+// const { name } = myProfile;
 
-const message = `私の名前は、${name}です。${myProfile.age}歳です。`;
-console.log(message);
+// const message = `私の名前は、${name}です。${myProfile.age}歳です。`;
+// console.log(message);
 
-//分割代入時にデフォルト値の設定
-const goodbyeMessage = {
-  goodbyeAge: 29
-};
-const { goodbyeName = "高橋" } = goodbyeMessage;
+// //分割代入時にデフォルト値の設定
+// const goodbyeMessage = {
+//   goodbyeAge: 29
+// };
+// const { goodbyeName = "高橋" } = goodbyeMessage;
 
-const mess = `さようなら！${goodbyeName}さん！`;
-console.log(mess);
+// const mess = `さようなら！${goodbyeName}さん！`;
+// console.log(mess);
+
+//スプレッド構文
+const arr1 = [1, 2];
+const summaryFunc = (num1, num2) => console.log(num1 + num2);
+
+//普通に配列を渡した場合
+// summaryFunc(arr1[0], arr1[1]);
+
+//スプレッド構文を用いた場合
+summaryFunc(...arr1);
+
+//スプレッド構文を使用し、要素をまとめる
+const arr2 = [1, 2, 3, 4, 5];
+
+const [num1, num2, ...arr3] = arr2;
+
+console.log(num1);
+console.log(num2);
+console.log(arr3);
