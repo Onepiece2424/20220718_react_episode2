@@ -271,3 +271,17 @@ const checkSumOver100 = (num1, num2) => {
 
 console.log(checkSumOver100(50, 40));
 console.log(checkSumOver100(50, 70));
+
+//論理演算子「&&」「||」の意味
+const flag1 = true;
+const flag2 = false;
+if (flag1 || flag2) {
+  console.log("フラグのどちらかはtrueです。");
+}
+
+if (flag1 && flag2) {
+  console.log("フラグは両方ともtrueです。");
+}
+
+//=> 「||」は、その左側がfalse判定なら右側を返す。（左側が、true判定なら左側が返却される。）
+//=> 「&&」は、その左側がtrue判定なら右側を返す。
