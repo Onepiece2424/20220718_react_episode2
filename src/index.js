@@ -148,46 +148,68 @@ document.getElementById("app").innerHTML = `
 // console.log(mess);
 
 //スプレッド構文
-const arr1 = [1, 2];
-const summaryFunc = (num1, num2) => console.log(num1 + num2);
+// const arr1 = [1, 2];
+// const summaryFunc = (num1, num2) => console.log(num1 + num2);
 
 //普通に配列を渡した場合
 // summaryFunc(arr1[0], arr1[1]);
 
 //スプレッド構文を用いた場合
-summaryFunc(...arr1);
+// summaryFunc(...arr1);
 
-//スプレッド構文を使用し、要素をまとめる
-const arr2 = [1, 2, 3, 4, 5];
+// //スプレッド構文を使用し、要素をまとめる
+// const arr2 = [1, 2, 3, 4, 5];
 
-const [num1, num2, ...arr3] = arr2;
+// const [num1, num2, ...arr3] = arr2;
 
-console.log(num1);
-console.log(num2);
-console.log(arr3);
+// console.log(num1);
+// console.log(num2);
+// console.log(arr3);
 
-//スプレッド構文を使用し、要素のコピー
-const arr4 = [10, 20];
-const arr5 = [30, 40];
-const [...arr6] = arr4;
-console.log(arr4);
-console.log(arr6);
+// //スプレッド構文を使用し、要素のコピー
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
+// const [...arr6] = arr4;
+// console.log(arr4);
+// console.log(arr6);
 
-//スプレッド構文を使用し、要素の結合
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// //スプレッド構文を使用し、要素の結合
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
 
-//複数のオブジェクトの　結合
-const obj1 = { val1: 10, val2: 20 };
-const obj2 = { val3: 30, val4: 40 };
+// //複数のオブジェクトの　結合
+// const obj1 = { val1: 10, val2: 20 };
+// const obj2 = { val3: 30, val4: 40 };
 
-//スプレッド構文でコピー
-const obj3 = { ...obj1 };
+// //スプレッド構文でコピー
+// const obj3 = { ...obj1 };
 
-//スプレッド構文で結合
-const obj4 = { ...obj1, ...obj2 };
+// //スプレッド構文で結合
+// const obj4 = { ...obj1, ...obj2 };
 
-console.log(obj3);
-console.log(obj4);
+// console.log(obj3);
+// console.log(obj4);
 
 //*スプレッド構文を使用し、「=(イコール)」を使用しないのは、コピーもとに影響を及ぼさないようにするため。
+
+//オブジェクトの省略記法
+//プロパティ名と変数名が同じ時１
+const name = "田中";
+const age = 30;
+
+const user = {
+  name: name,
+  age: age
+};
+console.log(user);
+
+//プロパティ名と変数名が同じ時２
+//オブジェクトのプロパティ名と設定する変数名が同一の場合は省略できる。
+const name1 = "佐藤";
+const age1 = 33;
+
+const user1 = {
+  name1,
+  age1
+};
+console.log(user1);
