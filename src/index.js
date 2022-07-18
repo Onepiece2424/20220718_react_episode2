@@ -228,3 +228,9 @@ const newArr1 = arr1.filter((num) => {
 });
 
 console.log(newArr1);
+
+//indexの扱い
+const nameArr = ["田中", "佐藤", "三田"];
+
+//第二引数をindexにする。
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
