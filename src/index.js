@@ -234,3 +234,16 @@ const nameArr = ["田中", "佐藤", "三田"];
 
 //第二引数をindexにする。
 nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
+
+//map関数を用いた条件分岐
+const nameArr2 = ["小野", "茂木", "岩倉"];
+
+const newNameArr = nameArr2.map((name) => {
+  if (name === "小野") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+
+console.log(newNameArr);
