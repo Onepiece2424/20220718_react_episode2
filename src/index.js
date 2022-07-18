@@ -247,3 +247,27 @@ const newNameArr = nameArr2.map((name) => {
 });
 
 console.log(newNameArr);
+
+//三項演算子
+//ある条件　？　条件がtrueの時の処理 : 条件がfalseの時の処理
+const val1 = 1 > 0 ? "trueです。" : "falseです。";
+console.log(val1);
+
+const printFormattedNum = (num) => {
+  const formattedNum =
+    typeof num === "number"
+      ? num.toLocaleString()
+      : "数値を入力してください！！";
+  console.log(formattedNum);
+};
+
+printFormattedNum(1300);
+printFormattedNum("1300");
+
+//関数のreturn部分で三項演算子を用いる。
+const checkSumOver100 = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています。" : "許容範囲内です。";
+};
+
+console.log(checkSumOver100(50, 40));
+console.log(checkSumOver100(50, 70));
