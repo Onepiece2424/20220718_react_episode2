@@ -194,22 +194,37 @@ document.getElementById("app").innerHTML = `
 
 //オブジェクトの省略記法
 //プロパティ名と変数名が同じ時１
-const name = "田中";
-const age = 30;
+// const name = "田中";
+// const age = 30;
 
-const user = {
-  name: name,
-  age: age
-};
-console.log(user);
+// const user = {
+//   name: name,
+//   age: age
+// };
+// console.log(user);
 
-//プロパティ名と変数名が同じ時２
-//オブジェクトのプロパティ名と設定する変数名が同一の場合は省略できる。
-const name1 = "佐藤";
-const age1 = 33;
+// //プロパティ名と変数名が同じ時２
+// //オブジェクトのプロパティ名と設定する変数名が同一の場合は省略できる。
+// const name1 = "佐藤";
+// const age1 = 33;
 
-const user1 = {
-  name1,
-  age1
-};
-console.log(user1);
+// const user1 = {
+//   name1,
+//   age1
+// };
+// console.log(user1);
+
+// //map関数
+const nameArr1 = ["高橋", "木村", "吉田"];
+
+nameArr1.map((name) => console.log(name));
+
+//filter関数
+const arr1 = [1, 2, 3, 4, 5, 6];
+
+//奇数（2で割ったあまりが１）のみ抽出
+const newArr1 = arr1.filter((num) => {
+  return num % 2 === 1;
+});
+
+console.log(newArr1);
